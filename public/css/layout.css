@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 18, 2017, 10:14:34 AM
+    Author     : TuanVM
+*/
+
+#container{
+}
+#chat-form{
+    height: 50%;
+}
+#message-content{
+    height: 400px;
+}
+#update-message{
+    height: 350px;
+    overflow-y: auto;
+}
+#dl-list-user{
+    height: 350px;
+    overflow-y: auto;
+}
+#list-user{
+    background-color: #999;
+    height: 400px;
+}
+#logout{
+    background-color: yellow;
+}

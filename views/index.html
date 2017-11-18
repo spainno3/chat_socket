@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Demo chat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/index.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="chat-form">
+                <div class="row border">
+                    <div id="list-user" class="col-4">
+                        <div class="h4">User Online</div>
+                        <dl id="dl-list-user">
+                            <li><img src="image/download.jpg" class="rounded-circle" width="20" height="20" alt="Cinque Terre">User 1</li>
+                        </dl>
+                    </div>
+                    <div id="message-content" class="col-8">
+                        <div class="h4">Message</div>
+                        <div class="col-12" id="update-message">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row border">
+                    <div class="col" id="other-logout"></div>
+                    <div class="col" id="typing"></div>
+                    <div class="w-100"></div>
+                    <div class="col-4" id="logout">
+                        <div class="row">
+                            <div class="col-8" id="current-user"></div> 
+                            <button type="submit" class="col-4" id="btn-logout">Logout</button>
+                        </div>
+                    </div>
+
+                    <div class="col-8" id="form-input">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="input-message" placeholder="Nhap noi dung" aria-label="Product name">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button" id="btn-send-message">Send</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="login-form">
+                <div class="form-row">
+                    <label for="inputEmail3" class="col-2 col-form-label">User</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="input-username" placeholder="Nhap user name">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btn-register">Sign in</button>
+            </div>
+        </div>
+    </body>
+</html>
